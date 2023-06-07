@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.listofcanditates'
 version = '0.0.1-SNAPSHOT'
-final def s = sourceCompatibility = '17'
+final def s = sourceCompatibility = '20'
 s
 jar.enabled = false
 repositories {
