@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Додати Кандидата</title>
+    <link rel="stylesheet" type="text/css" href="static/add.css">
+    <script>
+        function validateForm() {
+            var x = document.forms["candidateForm"]["popularityIndex"].value;
+            if (x != 70 && x != 15 && x != 10 && x != 5) {
+                alert("Індекс популярності може бути лише 70, 15, 10 або 5");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>Додати нового кандидата</h1>
+
+<form name="candidateForm" action="?candidates" method="post" onsubmit="return validateForm()">
+    <label for="surnameAndInitials">Прізвище та ініціали:</label><br>
+    <input type="text" id="surnameAndInitials" name="surnameAndInitials"><br>
+
+    <label for="dateOfBirth">Дата народження:</label><br>
+    <input type="date" id="dateOfBirth" name="dateOfBirth"><br>
+
+    <label for="placeOfBirth">Місце народження:</label><br>
+    <input type="text" id="placeOfBirth" name="placeOfBirth"><br>
+
+    <label for="popularityIndex">Індекс популярності:</label><br>
+    <input type="number" id="popularityIndex" name="popularityIndex"><br>
+
+    <input type="submit" value="Додати кандидата">
+</form>
+
+<a href="/templates/index.html">Повернутись на головну</a>
+</body>
+</html>

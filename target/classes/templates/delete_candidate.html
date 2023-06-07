@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Видалити Кандидата</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Видалити кандидата</h1>
+
+<form action="/delete_candidate" method="post">
+    <label for="candidateId">ID кандидата для видалення:</label><br>
+    <input type="number" id="candidateId" name="candidateId"><br>
+
+    <input type="submit" value="Видалити кандидата">
+</form>
+
+<a href="/templates/index.html">Повернутись на головну</a>
+</body>
+</html>

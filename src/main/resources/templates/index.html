@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Головна сторінка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #add8e6, #0000ff);
+        }
+
+        header {
+            background-color: #6495ed;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: inline-block;
+            background: #fff;
+            border: 2px solid #6495ed;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
+
+        nav ul li a {
+            background-color: #6495ed;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #1e90ff;
+            transform: scale(1.1);
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main section h2 {
+            color: #6495ed;
+        }
+
+        main section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #6495ed;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Список кандидатів</h1>
+</header>
+<nav>
+    <ul>
+        <li><a th:href="@{/candidates/add}">Додати кандидата</a></li>
+        <li><a th:href="@{/candidates}">Пошук та перегляд списку кандидатів</a></li>
+    </ul>
+</nav>
+<main>
+    <section>
+
+        <p>Тут ви можете додавати кандидатів та переглядати список кандидатів.</p>
+    </section>
+</main>
+<footer>
+    <p>© 2023 Список кандидатів. Всі права захищено.</p>
+</footer>
+</body>
+</html>

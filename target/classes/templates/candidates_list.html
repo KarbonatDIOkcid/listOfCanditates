@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Список кандидатів</title>
+    <style>
+        /* Додайте свій CSS тут */
+    </style>
+</head>
+<body>
+<h1>Список кандидатів</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Прізвище та ініціали</th>
+        <th>Дата народження</th>
+        <th>Місце народження</th>
+        <th>Індекс популярності</th>
+    </tr>
+    <!-- Цикл по всіх кандидатах -->
+    <tr th:each="candidate : ${candidates}">
+        <td th:text="${candidate.id}"></td>
+        <td th:text="${candidate.surnameAndInitials}"></td>
+        <td th:text="${candidate.dateOfBirth}"></td>
+        <td th:text="${candidate.placeOfBirth}"></td>
+        <td th:text="${candidate.popularityIndex}"></td>
+    </tr>
+</table>
+</body>
+</html>
+
